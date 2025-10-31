@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LH Games - Login</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body class="bg-dark text-white">
+    
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo.png" alt="LH Games Logo" class="site-logo"> 
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <section id="section-login" class="text-center p-4 rounded shadow-lg">
+            <h1 class="neon-text">Login</h1>
+            <div class="d-flex justify-content-center">
+                <form method="post" action="" id="login-form" class="w-100" style="max-width: 400px;">
+                    <p class="form-group text-start">
+                        <label for="usuario-login">Nome: </label>
+                        <input id="usuario-login" name="usuario" required="required" type="text"
+                            placeholder="Insira o seu usuário" class="form-control bg-secondary text-white" />
+                    </p>
+                    <p class="form-group text-start">
+                        <label for="senha-login">Senha: </label>
+                        <input id="senha-login" name="senha" required="required" type="password"
+                            placeholder="Insira a sua senha" class="form-control bg-secondary text-white" />
+                    </p>
+                    <p>
+                        <input type="button" value="Login" class="btn btn-primary w-100" id="bt-login" onclick="login()" />
+                    </p>
+                </form>
+            </div>
+        </section>
+
+        <section id="section-cadastro" class="text-center mt-5 p-4 rounded shadow-lg">
+            <div id="botao-cadastrar">
+                <button type="button" class="btn btn-info">Não é cadastrado ainda? Cadastre-se</button>
+            </div>
+            
+            <div id="form-cadastrar">
+                <h1 class="neon-text mt-3">Criar minha conta</h1>
+                <p>Informe os seus dados abaixo para criar sua conta.</p>
+
+                <div class="d-flex justify-content-center">
+                    <form method="post" action="" id="cadastro-form" class="w-100" style="max-width: 400px;">
+                        <p class="form-group text-start">
+                            <label for="usuario-cad">Usuário: </label>
+                            <input id="usuario-cad" name="usuario-cad" required="required" type="text"
+                                placeholder="ex. nome de usuário" class="form-control bg-secondary text-white" />
+                        </p>
+                        <p class="form-group text-start">
+                            <label for="email-cad">E-mail: </label>
+                            <input id="email-cad" name="email-cad" required="required" type="email"
+                                placeholder="seu@email.com.br" class="form-control bg-secondary text-white" />
+                        </p>
+                        <p class="form-group text-start">
+                            <label for="senha-cad">Senha: </label>
+                            <input id="senha-cad" name="senha-cad" required="required" type="password"
+                                placeholder="mínimo de 6 caracteres" class="form-control bg-secondary text-white" />
+                        </p>
+                        <p>
+                            <input type="button" value="Cadastrar" class="btn btn-primary w-100" id="bt-cadastrar"
+                                onclick="cadastro()" />
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark border-top border-secondary p-4 text-center mt-5">
+        <p class="mb-0 text-white">&copy; 2025 LH Games. Todos os direitos reservados.</p>
+    </footer>
+
+    <button id="voltar-topo" type="button" class="btn btn-outline-primary" onclick="topo()">&uarr; Voltar ao topo</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    
+    <script src="js/script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="js/jquery-script.js"></script>
+</body>
+
+</html>

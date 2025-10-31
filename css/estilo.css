@@ -1,0 +1,134 @@
+/* Importação de fonte (opcional, para visual mais "tech") */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* Estilização Global */
+body {
+    background-color: #1a1a1a; /* Um cinza bem escuro, melhor que preto puro */
+    color: #f0f0f0;
+    font-family: 'Arial', sans-serif; /* Fonte padrão limpa */
+}
+
+/* Estilo "Gamer" Neon para Títulos */
+.neon-text {
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #00BFFF, /* Azul Neon */
+        0 0 82px #00BFFF,
+        0 0 92px #00BFFF,
+        0 0 102px #00BFFF,
+        0 0 151px #00BFFF;
+    animation: flicker 1.5s infinite alternate;
+}
+
+h1, h2, h5 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Animação de "piscar" para o neon */
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #00BFFF,
+      0 0 82px #00BFFF,
+      0 0 92px #00BFFF;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+/* --- Componentes Bootstrap Customizados --- */
+
+/* Menu */
+.navbar {
+    box-shadow: 0 4px 12px rgba(0, 191, 255, 0.2); /* Sombra neon azul */
+}
+
+/* Estilo para a logo */
+.site-logo {
+    height: 40px; /* Ajuste o tamanho conforme necessário */
+    width: auto;
+    filter: drop-shadow(0 0 5px rgba(0, 191, 255, 0.5)); /* Leve brilho neon na logo */
+}
+
+/* Carrossel */
+.carousel-item img {
+    max-height: 500px;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+/* Cards de Produto */
+.card {
+    background-color: #2a2a2a !important;
+    border: 1px solid #00BFFF;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.5);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.btn-primary {
+    background-color: #00BFFF;
+    border-color: #00BFFF;
+    font-weight: bold;
+}
+.btn-primary:hover {
+    background-color: #fff;
+    border-color: #fff;
+    color: #00BFFF;
+}
+
+/* Galeria */
+.gallery-img {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Formulários de Login/Cadastro */
+#section-login, #section-cadastro {
+    background-color: #2a2a2a;
+    border: 1px solid #00BFFF;
+}
+
+.form-control {
+    border: 1px solid #00BFFF;
+}
+.form-control:focus {
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    border-color: #00BFFF;
+}
+
+/* Botão Voltar ao Topo */
+#voltar-topo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* JS vai controlar a exibição */
+    z-index: 1000;
+}
+
+/* --- Media Query para Responsividade --- */
+@media (max-width: 768px) {
+    .carousel-item img {
+        max-height: 250px;
+    }
+
+    h2, .neon-text {
+        font-size: 1.8rem;
+    }
+}
